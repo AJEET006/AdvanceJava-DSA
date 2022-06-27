@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Welcome</title>
+<!--   <style>
+            body{ background-image: url("./welcome.jpeg"); background-position:center; background-size:cover; background-repeat:no-repeat;}
+     </style> -->
+  </head>
+<body >
+      <style>
+            body{ background-image: url("welcome.jpg"); background-position:center; background-size:cover; background-repeat:no-repeat;background-attachment:fixed;}
+     </style>
+
+	<h1 style="color:blue;"><center>Welcome </center></h1>
+	<br/>
+	<input type='submit' value='signup'/>
+	<a href="registration.html">Sign UP</a>&emsp;
+	<a href="login.html">Sign in</a>&emsp;
+
+</body>
+</html>

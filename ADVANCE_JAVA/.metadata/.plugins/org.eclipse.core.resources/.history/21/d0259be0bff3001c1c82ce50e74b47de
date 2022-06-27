@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+ <style>
+            body{ background-image: url("goodbye.jpg"); background-position:center; background-size:cover; background-repeat:no-repeat;background-attachment:fixed;}
+     </style>
+<h1>You have registered Successfully!!!</h1>
+
+<a href="Welcome.html">Menu</a>
+</body>
+</html>

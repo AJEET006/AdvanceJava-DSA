@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+	body{background-image:url("./home6.jpg"); height: 50%;width:100%;background-repeat: no-repeat;
+	background-size: cover;}
+</style>
+<meta charset="ISO-8859-1">
+<title>Welcome Home</title>
+</head>
+<body>
+	
+	<a href="CurrencyConverter.html"><font size="10" style="border-width: groove;">1.CurrencyConverter</font></a>
+	<br />
+	<a href="RegistrationForm.html"><font size="10" style="border-width: medium;">2.RegistrantionForm</font></a>
+	<br />
+	<a href="GoodBye.html"><font size="10" style="border-width: medium;">3.Goodbye</font></a>
+</body>
+</html>

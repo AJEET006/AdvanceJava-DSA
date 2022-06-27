@@ -1,0 +1,95 @@
+package hw;
+
+import java.io.IOException;
+import java.io.PrintWriter;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.util.HashMap;
+
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+
+
+
+@WebServlet("/SignIn")
+public class SignIn extends HttpServlet {
+
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException
+	{
+
+
+		response.setContentType("text/html");
+		PrintWriter pw = response.getWriter();
+
+		pw.println("<html><body><center>");
+
+		pw.println("<form  method='GET'>");
+
+		pw.println("<br>Enter Username:<input type='text' name='Uname'/>");
+		pw.println("<br>Enter Password:<input type='text' name='PWD'/>");
+		pw.println("<br /><br /><br /><center> <input type='submit' value='submit'></center>");
+
+		pw.println("</form>");
+
+		pw.println("</center></body></html>");
+		pw.close();
+	}
+
+	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+
+		PrintWriter pw = response.getWriter();
+		DAO dao = new DAO();
+		HashMap<String,String> hmp =dao.verify();
+		String Uname=request.getParameter("Uname");
+		String PWD=request.getParameter("PWD");
+		response.setContentType("text/html");
+		pw = response.getWriter();
+		pw.println("<html><body><center>");
+		if(hmp.containsKey(Uname))
+		{
+			String password = hmp.get(Uname);
+			if(password.equals(PWD))
+			{
+				pw.println("logged in seccessfully!!");
+			}
+			else
+			{
+				pw.println("password mismatch");
+			}
+		}
+
+		else
+		{
+			pw.println("invalid user");
+		}
+				
+			pw.println("<style>\r\n" + 
+					"            body{ background-image: url(\"login.jpg\"); background-position:center; background-size:cover; background-repeat:no-repeat;background-attachment:fixed;}\r\n" + 
+					"     </style>");
+			pw.println("<form action='login.html' method='POST'/>");
+			pw.println("<input type='submit' value='SignIn'/>");
+			pw.println("</form></center></body></html>");
+		
+	}
+
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

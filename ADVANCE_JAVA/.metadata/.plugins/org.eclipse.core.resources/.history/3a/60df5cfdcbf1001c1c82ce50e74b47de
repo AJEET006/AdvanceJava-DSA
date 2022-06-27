@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+	body{background-image:url("./home6.jpg"); height: 50%;width:100%;background-repeat: no-repeat;
+	background-size: cover;}
+</style>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+	<h1><a href="CurrencyConverter.html"> style="border-width: groove;">1.CurrencyConverter</a></h1>
+	<h1><a href="RegistrationForm.html"> style="border-width: medium;">2.RegistrantionForm</a></h1>
+	<h1><a href="GoodBye.html"> style="border-width: medium;">3.Goodbye</h1></a>
+</body>
+</html>

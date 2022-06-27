@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+	<h1>First web Application !!!</h1>
+	<center>
+	<a href="changecurrency.html"><h3>1.currency converter</h3></a>
+	</center>
+</body>
+</html>

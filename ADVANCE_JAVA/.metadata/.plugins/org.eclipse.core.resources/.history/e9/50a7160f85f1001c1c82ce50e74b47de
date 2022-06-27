@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Good bye</title>
+</head>
+<head background="F:\ADVANCE_JAVA\Goodbye.jpg">
+<body>
+	<font color="red">
+	<h1>
+	
+	<i><a>Good Bye</a></i></h1>
+	</font>
+	
+</head>	
+</body>
+</html>

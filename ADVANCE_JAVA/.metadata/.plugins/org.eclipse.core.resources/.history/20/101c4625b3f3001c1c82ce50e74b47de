@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><center>Login :</center></title>
+    <center>
+    <div style ="border: 5px; border-style: solid;border: size 9px; width: fit-content;">
+    <h1>Login</h1>
+</head>
+ <body>
+  <style>
+            body{ background-image: url("login.jpg"); background-position:center; background-size:cover; background-repeat:no-repeat;background-attachment:fixed;}
+     </style>
+<form action="SignIn" method="GET">
+    <table>
+        <tr><td>
+        <br/>
+            <center>Enter username:<input type="text" placeholder="Enter user name"></center>
+        </td></tr>
+        <br/>
+        <tr><td>
+          <center>Enter password:<input type="text" placeholder="Enter password"></center>
+        </td></tr>
+        <br/>
+        
+    </table>
+</div><br />
+    <input type="submit" value="Next" type="Next"> &emsp;&emsp;
+    <input type="button" value="Reset" type="reset">
+    
+</body>
+<a href="Welcome.html">Home</a>
+
+</center>
+</html>

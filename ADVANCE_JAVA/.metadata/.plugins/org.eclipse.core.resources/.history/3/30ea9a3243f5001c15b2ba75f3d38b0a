@@ -1,0 +1,124 @@
+package hw;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
+import java.util.ArrayList;
+import java.util.HashMap;
+
+import javax.servlet.ServletException;
+
+
+public class DAO {
+	static public HashMap<String, String>  hmp = new HashMap<String, String>();
+	static public ArrayList<String> al = new ArrayList<>();
+	Connection con = null;
+	public Connection myGetConnection() {
+
+		
+		try {
+			Class.forName("com.mysql.cj.jdbc.Driver");
+
+			String url = "jdbc:mysql://localhost:3306/db2"; 
+			String uname = "root";
+			String pwd = "aieee@12345";
+
+			con = DriverManager.getConnection(url, uname, pwd);
+
+		} catch (ClassNotFoundException | SQLException E) {
+			System.out.println("The Connection Could Not be Made : " + E);
+		}
+		return con;
+	}
+	
+
+	public void signUp(String name,String Gender,String Mob,String uname,String pwd)
+	{
+		Connection con = myGetConnection();
+		try
+		{
+			PreparedStatement pstmt = con.prepareStatement("insert into Signup values(?,?,?,?,?)");
+			
+			pstmt.setString(1,name);//internlly single qoute added or not if null
+			pstmt.setString(2,Gender);
+
+			pstmt.setString(3, Mob);
+			pstmt.setString(4,uname);
+			pstmt.setString(5,pwd);
+			pstmt.executeUpdate();
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		try {
+			con.close();
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
+	public ResultSet getRows(String sql)
+	{
+
+		 con = myGetConnection();
+		ResultSet rs =null;
+		Statement stmt;
+		try {
+			stmt = con.createStatement();
+			rs=stmt.executeQuery(sql);
+
+		}catch(SQLException e)
+		{
+			e.printStackTrace();
+		}
+		return rs;
+		
+	}
+	
+
+	public HashMap verify() throws ServletException 
+	{
+		DAO dao=new DAO();
+		ResultSet rs= dao.getRows("select Username,Password from Signup");
+
+		try {
+			while(rs.next())
+			{
+				hmp.put(rs.getString(1), rs.getString(2));
+				System.out.println(rs.getString(1)+" " +rs.getString(2));
+			}
+
+		} catch (SQLException e) {
+
+			e.printStackTrace();
+		}
+		return hmp;
+	}
+	
+
+	public ArrayList Welcome() throws ServletException 
+	{
+		DAO dao=new DAO();
+		ResultSet rs= dao.getRows("select Username from Signup");
+
+		try {
+			while(rs.next())
+			{
+
+				al.add(rs.getString(1));
+				//System.out.println(rs.getString(1)+" " +rs.getString(2));
+			}
+
+		} catch (SQLException e) {
+
+			e.printStackTrace();
+		}
+		return al;
+	}
+	
+
+	
+}

@@ -1,0 +1,68 @@
+package hw;
+
+import java.io.IOException;
+import java.io.PrintWriter;
+
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+
+@WebServlet("/Signup")
+public class Signup extends HttpServlet {
+
+
+	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException
+	{
+		response.setContentType("text/html");
+		PrintWriter pw = response.getWriter();
+
+		pw.println("<html><body><center>");
+
+		pw.println("<form  method='POST'>");
+		
+		pw.println("Enter FullName:<input type='text' name='FName'/>");
+		pw.println("<br />Enter Gender: Male<input type='radio' name='Gender' value='Male'/>");		
+		pw.println("Female<input type='radio' name='Gender' value='Female'/>");
+		pw.println("<br>Enter Contact:<input type='text' name='Contact'/>");
+
+		pw.println("<br>Enter Username:<input type='text' name='Uname'/>");
+		pw.println("<br>Enter Password:<input type='text' name='PWD'/>");
+		pw.println("<br /><br /><br /><center> <input type='submit' value='submit'></center>");
+
+		pw.println("</form>");
+
+		pw.println("</center></body></html>");
+		
+
+		
+		pw.close();
+	}
+	
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		
+		String Fname=request.getParameter("FName");
+		String Gender=request.getParameter("Gender");
+		String Contact=request.getParameter("Contact");
+		String Uname=request.getParameter("Uname");
+		String PWD=request.getParameter("PWD");
+		
+		DAO dao=new DAO();
+		dao.signUp(Fname,Gender,Contact,Uname,PWD);
+		
+		response.setContentType("text/html");
+		PrintWriter pw = response.getWriter();
+	
+		pw.println("<html><body>");
+		pw.println("<form action='submitPage.html' method='GET'>");
+		pw.println("<br /><input type='submit' value='Next'/>");
+		pw.println("</form></body></html>");
+		
+		pw.close();
+		
+	}
+
+
+}

@@ -1,0 +1,37 @@
+<html>
+    <head>
+        <title>
+            Registration-form
+        </title>
+        <h1 style="color: brown;"><center><u>Registration_Form</u></center></h1>
+      <h3>Register now .....</h3>
+ 
+    </head>
+
+    <body >
+     <style>
+            body{ background-image: url("register1.jpg"); background-position:center; background-size:cover; background-repeat:no-repeat;background-attachment:fixed;}
+     </style>
+        <fieldset>
+            <form action='submitPage.html' method='POST' >      
+                 <br />
+        	  FullName:<input type="Text" placeholder="Enter First-Name" name='FName' />
+                <br/>
+                Gender:-
+                Male:<input type='radio' value='Male' name='Gender'/>
+                Female:<input type='radio' value='Female' name='Gender'/>
+                </br>
+                Contact:<input type='number' name='Contact'/>
+                <br/>
+                Username:<input type="Text" name ='Uname' placeholder="Enter UserName " />
+                <br/>
+                Password:<input type="password" name='PWD' placeholder=" Enter Password " />
+                 <br/>
+               <input type="submit" value="Submit">&emsp;&emsp;&emsp;&emsp;&emsp;<input type="Reset" value="Reset">
+            </p>
+            <a href="Welcome.html">Home</a><br />
+            </form>
+            </fieldset>
+            </body>
+           
+            </html>

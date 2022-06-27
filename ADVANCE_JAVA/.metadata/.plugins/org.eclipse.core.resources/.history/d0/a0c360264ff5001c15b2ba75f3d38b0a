@@ -1,0 +1,87 @@
+package hw;
+
+import java.io.IOException;
+import java.io.PrintWriter;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.util.HashMap;
+
+import javax.servlet.RequestDispatcher;
+import javax.servlet.ServletContext;
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+
+@WebServlet("/SignIn")
+public class SignIn extends HttpServlet {
+
+	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException
+	{
+		response.setContentType("text/html");
+		PrintWriter pw = response.getWriter();
+
+		pw.println("<html><body><center>");
+
+		pw.println("<form  method='POST'>");
+
+		pw.println("<br>Enter Username:<input type='text' name='Uname'/>");
+		pw.println("<br>Enter Password:<input type='text' name='PWD'/>");
+		pw.println("<br /><br /><br /><center> <input type='submit' value='submit'></center>");
+
+		pw.println("</form>");
+
+		pw.println("</center></body></html>");
+		pw.close();
+	}
+
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+
+		PrintWriter pw = response.getWriter();
+		
+		DAO dao = new DAO();
+		HashMap<String,String> hmp =dao.verify();
+		String Uname=request.getParameter("Uname");
+		String PWD=request.getParameter("PWD");
+
+		if(hmp.containsKey(Uname))
+		{
+			String password = hmp.get(Uname);
+			if(password.equals(PWD))
+			{
+				//pw.println("logged in seccessfully!!");
+
+				ServletContext context = super.getServletContext();
+				RequestDispatcher rd=context.getRequestDispatcher("/Home");
+				request.setAttribute("counter", Uname);//autoboxing
+				rd.forward(request, response);
+			}
+			else
+			{
+				pw.println("password mismatch");
+			}
+		}
+
+		else
+		{
+			String s = "Invalid user";
+			response.setContentType("text/html");
+			pw.println("<html><body><center>");
+			
+			pw.println("<font color='red'> invalid user </font>");
+			pw.println("<center></html></body>");
+			request.getRequestDispatcher("/SignIn").forward(request, response);;
+			
+		}
+
+
+		pw.close();	
+	}
+
+
+
+}
+
+

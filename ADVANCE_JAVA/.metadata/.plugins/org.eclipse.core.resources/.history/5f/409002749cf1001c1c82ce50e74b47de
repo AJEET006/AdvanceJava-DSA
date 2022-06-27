@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+	body{background-image:url("./home.jpg"); height: 50%;width:100%;background-repeat: no-repeat;
+	background-size: cover;}
+</style>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+	<center>
+		<div style="color: rgba(110, 199, 126, 0.825);background-color: rgb(241, 248, 188);border: 2px;border-style:groove;
+border: size 2px;width:fit-content;">
+	<h1 style="background-color: rgb(126, 90, 208);">Currency Converter</h1>
+		  Amount to Convert :
+		<input type="text" placeholder="0">
+			<br/><br/>
+				From
+			            <select>
+							<option value="select">Select One...</option>
+							<option value="USD">USD</option>
+							<option value="INR">INR</option>
+						</select>
+                To
+				    	<select class="Select">
+							<option placeholder="Enter">Select One …</option>
+							<option value="USD">USD</option>
+							<option value="INR">INR</option>
+						</select>
+					<center><br/>      
+
+				<input type ="button" value="Convert"/>	
+
+				<input type ="button" value="Reset"/>
+	    	   
+			    <h3>Converted Amount :</h3>
+	    
+</center>
+
+</div>
+</body>
+</html>

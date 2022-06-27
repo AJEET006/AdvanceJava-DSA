@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<style>
+	body{background-image:url("./Goodbye.jpg"); height: 200%;width:100%;background-repeat: no-repeat;
+	background-size: cover;}
+</style>
+<title>Good bye</title>
+</head>
+
+<body>
+	<font color="magenta">
+	<h1>
+	<center>
+	<strong><i><a>Thank you for being here</a></i></strong>
+	</center>
+	</h1>
+	</font>
+<a href="Firstpage.html"><h2 style="border-width: medium;">HOME</h2></a>
+</body>
+</html>

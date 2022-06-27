@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<style>
+	body{background-image:url("./regis4.jpg"); height: 200%;width:100%;background-repeat: no-repeat;
+	background-size: cover;}
+</style>
+<title>Insert title here</title>
+</head>
+<body style="background-color: rgb(100, 193, 209);">
+	<a href="Firstpage.html"><font size="6" style="border-width: medium;">HOME</font></a>
+	<form>
+		<h2 size="5" style="background-color: background;">
+			<bg>
+			<center>REGISTRATION FORM</center>
+			</bg>
+		</h2>
+		<font size="5">
+		<table>
+			
+			<tr>
+				<td>Name :</td>
+
+				<td><input type="text" placeholder="Name" name="" /></td>
+			</tr>
+			
+			<tr>
+				<td>Surname :</td>
+				<td><input type="text" placeholder="Surname" surname="" /></td>
+			</tr>
+			
+			<tr>
+				<td>DOB:</td>
+				<td><input type="date" placeholder="DOB" date="" /></td>
+			</tr>
+			
+			<tr>
+				<td>Password :</td>
+				<td><input type="password" placeholder="Password" password=""/></td>
+			</tr>
+			
+			<tr>
+			<td> Re_Enter Password :</td>
+			<td><input type="password" placeholder="Re_enter Password" password=""/></td>
+			</tr>
+			
+			<tr>
+			<td>  Email :</td>
+			<td><input type="email" placeholder="Email" email="" /></td>
+			</tr>
+			
+			<tr>
+				<td> Mobile No :</td>
+				<td>
+					<select>
+							<option>+00</option>
+							<option>+91</option>
+							<option>+92</option>
+							<option>+93</option>
+							<option>+94</option>
+							<option>+95</option>
+							<option>+96</option>
+							<option>+97</option>
+					</select>
+					<input type="Mobile No" placeholder="98254*****" name="">
+				</td>
+			</tr>
+			
+		</table>
+		</font>
+		<font size="5">
+			Address :
+			<textarea rows="5" cols="5"></textarea>
+		</font>
+		<font size="5">
+			State : 
+			<select name="State">
+				<option>select option</option>
+				<option>Uttar pradesh</option>
+				<option>Maharashtra</option>
+				<option>Rajasthan</option>
+				<option>Punjab</option>
+				<option>Bihar</option>
+
+			</select>
+		</font>
+		<font size="5">
+			City : 
+			<select name="City">
+				<option>select option</option>
+				<option>Prayagraj</option>
+				<option>Pune</option>
+				<option>Chennai</option>
+				<option>Hydarabad</option>
+				<option>Darbhanga</option>
+
+			</select>
+		</font>
+
+
+
+		<font size="5">
+			Gender : 
+			Male <input type="radio" name="gender" /> 
+			Female <input type="radio" name="gender" />
+			Others <input type="radio" name="gender" />
+				
+		</font>
+		<font size="5">
+			Educational Qualification
+			<table border="1">
+				<tr>
+					<th>Qualification</th>
+					<th>DocUploaded</th>
+
+				</tr>
+				<tr>
+					<td>SSC</td>
+					<td><input type="checkbox" name="SSC"></td>
+				</tr>
+				<tr>
+					<td>HSC</td>
+					<td><input type="checkbox" name="HSC"></td>
+				</tr>
+				<tr>
+					<td>Graduation</td>
+					<td><input type="checkbox" name="Graduation"></td>
+				</tr>
+			</table>
+			<br /> <input type="submit" value="Submit" name=""> 
+			
+				 <input type="button" value="CLEAR" name="">
+
+		</font>
+		
+
+	</form>
+
+</body>
+</html>

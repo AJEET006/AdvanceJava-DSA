@@ -1,0 +1,56 @@
+package Study.Hw;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.util.ArrayList;
+
+
+
+public class Q2 {
+
+	public static void main(String[] args)
+	{
+		Connection con = null;
+
+			try
+			{
+				String url ="jdbc:mysql://localhost:3306/db2";
+				String uname = "root";
+				String pwd = "aieee@12345";
+
+				con = DriverManager.getConnection(url, uname, pwd);
+			    String sql=("select name from product");
+			    PreparedStatement ps=con.prepareStatement(sql);
+			    ResultSet rs = ps.executeQuery();
+			   
+			    ArrayList<String> name1= new ArrayList<String>();
+			    
+			    while(rs.next())
+			    {
+			    	name1.add(rs.getString("name"));
+			    	//System.out.println(rs.getString("name")); 
+			    	//System.out.println(rs);
+			    }
+			    
+			    System.out.println("names in the list :");
+			    for (String product : name1)
+			    {
+					System.out.println(product);
+				}
+			}
+			catch(SQLException e)
+			{
+				System.out.println("the connection could not be made" +e);
+			}
+			
+
+		}
+		
+	
+	
+	}
+
+

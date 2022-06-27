@@ -1,0 +1,32 @@
+
+<html>
+
+<head>
+<title></title>
+<center><style>
+body {
+	background-image: url("./home8.png");
+	height: 00%;
+	width: 100%;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+</style></center>
+
+</head>
+
+
+<body>
+		<center><h1> Welcome Home TomCat</h1></center>
+
+	<center><a href="CurrencyConverter.html"><font size="5"
+		style="border-width: groove;">1.CurrencyConverter</font></a></center>
+	<br />
+	<center><a href="RegistrationForm.html"><font size="5"
+		style="border-width: medium;">2.RegistrantionForm</font></a></center>
+	<br />
+	<center><a href="GoodBye.html"><font size="5"
+		style="border-width: medium;">3.Goodbye</font></a></center>
+	
+</body>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<style>
+	body{background-image:url("./Goodbye.jpg"); height: 200%;width:100%;background-repeat: no-repeat;
+	background-size: cover;}
+</style>
+<title>Good bye</title>
+</head>
+
+<body>
+	<font color="magenta">
+	<h1>
+	
+	<strong><i><a>Good Bye</a></i></strong>
+	</h1>
+	</font>
+
+</body>
+</html>

@@ -1,0 +1,33 @@
+package Study.Hw;
+
+import java.sql.Connection;
+import java.util.Scanner;
+
+import Study.DAO;
+
+public class Client3 {
+
+	public static void main(String[] args) {
+		DAO dao = new DAO();
+		Connection con =  dao.myGetConnection();
+		System.out.println(con);
+		Scanner sc = new Scanner(System.in);
+				
+		do 
+		{
+			
+			System.out.println("enter your choice for dml commands");
+			System.out.println("1. update name of a given id");
+			System.out.println("2. update cost of given id");
+			System.out.println("3. update both name and cost of given id");
+			System.out.println("4. delete a record of given");
+			System.out.println("5. show only the info of row of given id");
+			System.out.println("6. quit");
+			int num =sc.nextInt();
+
+
+			
+		}while(true);
+	}
+
+}

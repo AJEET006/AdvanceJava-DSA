@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body style="background-color: rgb(100, 193, 209);">
+	<form>
+		<h1 style="bacbackground-color:;">
+			<bg>
+			<cborder-bottom-color:>REGISTRATION FORM</center>
+			</bg>
+		</h1>
+		<h4>
+		<table>
+			<tr>
+				<td>UserName :</td>
+
+				<td><input type="text" name="" /></td>
+			</tr>
+			<tr>
+				<td>Surname :</td>
+				<td><input type="text" /></td>
+			</tr>
+			<tr>
+				<td>DOB:</td>
+				<td><input type="date" /></td>
+			</tr>
+			<tr>
+				<td>Password :</td>
+				<td><input type="password" /></td>
+			</tr>
+			<tr>
+			<td> Re_Enter Password :</td>
+			<td><input type="password" /></td>
+			</tr>
+			<tr>
+			<td>  Email :</td>
+			<td><input type="email" /></td>
+			</tr>
+			<tr>
+				<td> Favorite :</td>
+				<td><input type="color" /></td>
+			</tr>
+		</table>
+		</h4>
+		<h4>
+			Address :
+			<textarea rows="5" cols="5"></textarea>
+		</h4>
+		<h4>
+			State : <select name="State">
+				<option>select option</option>
+				<option>Uttar pradesh</option>
+				<option>Maharashtra</option>
+				<option>Rajasthan</option>
+				<option>Punjab</option>
+				<option>Bihar</option>
+
+			</select>
+		</h4>
+		<h4>
+			City : <select name="City">
+				<option>select option</option>
+				<option>Prayagraj</option>
+				<option>Pune</option>
+				<option>Chennai</option>
+				<option>Hydarabad</option>
+				<option>Darbhanga</option>
+
+			</select>
+		</h4>
+
+
+
+		<h4>
+			Gender : Male <input type="radio" name="gender" /> Female <input
+				type="radio" name="gender" /> Others <input type="radio"
+				name="gender" />
+		</h4>
+		<h3>
+			Educational Qualification
+			<table border="1">
+				<tr>
+					<th>Qualification</th>
+					<th>DocUploaded</th>
+
+				</tr>
+				<tr>
+					<td>SSC</td>
+					<td><input type="checkbox" name="SSC"></td>
+				</tr>
+				<tr>
+					<td>HSC</td>
+					<td><input type="checkbox" name="HSC"></td>
+				</tr>
+				<tr>
+					<td>Graduation</td>
+					<td><input type="checkbox" name="Graduation"></td>
+				</tr>
+			</table>
+			<br /> <input type="button" value="OK"> <input type="button"
+				value="SAVE"> <input type="button" value="CLEAR">
+
+		</h3>
+
+	</form>
+</body>
+</html>

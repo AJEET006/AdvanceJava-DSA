@@ -1,0 +1,76 @@
+package study.HW;
+
+import java.lang.reflect.Field;
+import java.util.Scanner;
+
+public class Test1 {
+
+	public static void main(String[] args) throws NoSuchFieldException, SecurityException, InstantiationException, IllegalAccessException, ClassNotFoundException {
+		//Class<Test> obj = Test.class;
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter the class name");
+		Class obj =Class.forName(sc.next());
+		Object obj1 =obj.newInstance();
+		Field[] field = obj.getDeclaredFields();
+		//Field[] field = obj.getFields();
+		for (Field field2 : field)
+		{
+			field2.setAccessible(true);
+			System.out.println("object name :"+field2.getName()+ " : "+field2.get(obj1));
+			//System.out.println(field2.set(obj, value););
+		}
+		
+		Field id = obj.getDeclaredField("id12");
+		id.setAccessible(true);
+		System.out.println("Field name :"+id.getName());
+		System.out.println("field Type :"+id.getType());
+	
+		
+		//Test test=(Test) obj.newInstance();
+	//	Object test=obj.newInstance(); //obj1  Object obj1 =obj.newInstance();
+		id.set(obj1, 25);
+		Object idValue =id.get(obj1);
+		System.out.println("id :"+idValue);
+	}
+
+}
+
+
+
+/*
+ --------------------------------------------------------------------------------------------------------------
+obj.newInstance()-->
+					Creates a new instance of the class represented by this Class object. 
+					The class is instantiated as if by a new expression with an empty argument list. 
+					The class is initialized if it has not already been initialized.
+----------------------------------------------------------------------------------------------------------------
+Class.forName(sc.next())-->
+               				Parameters:className - the fully qualified name of the desired class.
+			   				Returns:the Class object for the class with the specified name.
+----------------------------------------------------------------------------------------------------------------
+getDeclaredFields()-->
+					1. Returns an array of Field objects reflecting all the fieldsdeclared by the class or interface represented by this Class object. 
+			   			This includes public, protected, default(package) access, and private fields, but excludes inherited fields. 
+			
+					2. If this Class object represents a class or interface with nodeclared fields, then this method returns an array of length 0. 
+
+					3. If this Class object represents an array type, a primitivetype, or void, then this method returns an array of length 0. 
+
+					4. The elements in the returned array are not sorted and are not in anyparticular order.
+					
+getFields()-->
+     throws SecurityException             
+			 .Returns an array containing Field objects reflecting all the accessible public fields of the class or 
+			  interface represented bythis Class object. 					
+
+----------------------------------------------------------------------------------------------------------------
+get(Object obj)-->
+				Returns the value of the field represented by this Field, on the specified object. 
+				The value is automatically wrapped in an object if it has a primitive type.
+----------------------------------------------------------------------------------------------------------------
+	
+
+
+
+
+*/

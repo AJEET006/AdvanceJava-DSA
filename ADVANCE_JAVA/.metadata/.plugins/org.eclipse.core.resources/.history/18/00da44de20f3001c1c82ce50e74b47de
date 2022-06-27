@@ -1,0 +1,20 @@
+
+
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+
+/**
+ * Servlet implementation class DisplayProduct
+ */
+@WebServlet("/DisplayProduct")
+public class DisplayProduct extends HttpServlet {
+	private static final long serialVersionUID = 1L;
+
+    /**
+     * Default constructor. 
+     */
+    public DisplayProduct() {
+        // TODO Auto-generated constructor stub
+    }
+
+}

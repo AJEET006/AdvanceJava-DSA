@@ -1,0 +1,32 @@
+package HW;
+
+import java.io.IOException;
+import java.io.PrintWriter;
+
+import javax.servlet.ServletException;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+public class InputServlet extends HttpServlet {
+
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		
+		response.setContentType("text/html");
+		PrintWriter pw = response.getWriter();
+		
+		pw.println("<html><body>");
+		
+		   pw.println("<form action='verify' method='post'>");
+		   
+		     pw.println("Enter a Username:<input type='String' name='Uname'/>");
+		     pw.println("Enter a Password:<input type='String' name='PWD'/>");
+		     pw.println("<br /> <input type='submit' value='show table'>");
+		     
+		pw.println("</form>");
+		
+		pw.println("</body></html>");
+		pw.close();
+	}
+
+}
